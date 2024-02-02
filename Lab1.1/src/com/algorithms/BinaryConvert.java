@@ -8,8 +8,16 @@ public class BinaryConvert {
     }
 
     public static int convertFromBinary(String binary) {
-        // TODO-Lab1.1: return calculated decimal value converted from String binary
-        return 0;
+        //-Lab1.1: return calculated decimal value converted from String binary
+
+        int decimalValue = 0;
+        int binaryLength = binary.length() - 1;
+        for (int i = 0; i < binary.length(); i++) {
+               int thisDigi = Character.getNumericValue(binary.charAt(i));
+               decimalValue += thisDigi * Math.pow(2, binaryLength);
+               binaryLength--;
+           }
+        return decimalValue;
     }
 
 }

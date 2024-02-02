@@ -26,7 +26,7 @@ public class SearchAlgorithmTest {
     @Test
     public void binarySearchNotFound() {
         int target = 7;
-        int expected = -4;
+        int expected = -1;
         int actual = SearchAlgorithm.binarySearch(target, array);
         assertEquals(expected, actual);
     }

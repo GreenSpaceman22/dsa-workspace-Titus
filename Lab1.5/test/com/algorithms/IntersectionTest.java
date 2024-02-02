@@ -51,6 +51,10 @@ public class IntersectionTest {
 
     @Test
     public void intersection_identical() {
+        int[] numbers1 = new int[] {1,2,3,4,5,6,7};
+        int[] numbers2 = new int[] {1,2,3,4,5,6,7};
+        Set<Integer> expected = Set.of(1,2,3,4,5,6,7);
+        testForSymmetricSuccess(numbers1,numbers2,expected, intersection::intersection);
         // TODO-Lab1.5: Implement test of intersection for arrays with all values in common, as
         //  described in test-plan.md. You may invoke helper method testForSymmetricSuccess, if you
         //  find it useful to do so.
@@ -58,6 +62,10 @@ public class IntersectionTest {
 
     @Test
     public void intersectionFast_identical() {
+        int[] numbers1 = new int[] {1,2,3,4,5,6,7};
+        int[] numbers2 = new int[] {1,2,3,4,5,6,7};
+        Set<Integer> expected = Set.of(1,2,3,4,5,6,7);
+        testForSymmetricSuccess(numbers1,numbers2,expected, intersection::intersectionFast);
         // TODO-Lab1.5: Implement test of intersectionFast for arrays with all values in common, as
         //  described in test-plan.md. You may invoke helper method testForSymmetricSuccess, if you
         //  find it useful to do so.
